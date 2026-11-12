@@ -1,6 +1,6 @@
 # Factory 3D Map
 
-Mapa e editor industrial tridimensional, com identidade arquitetônica clara, ardósia, cobre e verde técnico. Projeto independente do Virtual Factory 3D, usado como referência de comportamento.
+Mapa e editor industrial tridimensional, com identidade arquitetônica industrial, ardósia, cobre e verde técnico. Projeto independente do Virtual Factory 3D, usado como referência de comportamento.
 
 ![Factory 3D Map](docs/interface-desktop.png)
 
@@ -24,6 +24,8 @@ Abra [Factory 3D Map local](http://127.0.0.1:8082). Não há instalação de dep
 - O seletor compacto localiza áreas. **Planta** muda para a vista superior e **Enquadrar** restaura a visão geral.
 - O inspetor aparece ao selecionar um objeto no monitoramento. O relatório reúne os indicadores demonstrativos.
 - **Projetos → Salvar cópia** guarda uma versão nomeada; **Novo projeto** inicia outro layout. Salve uma cópia antes de substituir o layout ativo. As cópias podem ser reabertas após recarregar.
+
+O tema verde é o padrão na primeira abertura. O tema branco usa pisos e equipamentos contrastantes, e a escolha de tema é lembrada ao recarregar.
 
 Layouts ficam no navegador e na origem usada. Arquivo local e HTTP podem ter armazenamentos diferentes. Limpar os dados do navegador também remove os layouts. As chaves são próprias do Factory 3D Map e não carregam dados do Virtual Factory.
 

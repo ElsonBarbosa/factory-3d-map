@@ -29,4 +29,4 @@ Análise da versão local de `virtual-factory-3d`, commit `ab6917a8ac9dae83561b6
 
 Nenhum logotipo, CSS ou gerador de modelos do produto original é usado em execução. A lógica de geometria, navegação, validação, ligações e serialização foi extraída para uma cópia independente. `models.js`, `map.css`, `shell.js`, `projects.js` e a composição HTML são novos. A apresentação de construção e monitoramento fica em arquivos próprios. Não existe importação, link simbólico ou dependência de arquivos do diretório original.
 
-O armazenamento usa exclusivamente `factory3dmap.layout.v1` e `factory3dmap.projects.v1`. A chave `virtualFactoryEditorV1` não é lida nem migrada. O Git do novo projeto aponta somente para `ElsonBarbosa/factory-3d-map`.
+Os layouts usam exclusivamente `factory3dmap.layout.v1` e `factory3dmap.projects.v1`; a preferência visual usa `factory3dmap.theme.v1`. A chave `virtualFactoryEditorV1` não é lida nem migrada. O Git do novo projeto aponta somente para `ElsonBarbosa/factory-3d-map`.

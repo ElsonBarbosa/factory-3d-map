@@ -1,0 +1,18 @@
+{"chrome":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36","three":"128","renderer":"ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)","areas":7,"machines":28}
+OK  primeira abertura verde sem preferência anterior
+OK  branco com base, áreas, contornos e equipamentos distintos, sem alterar layout: {"process":"7e8f85","area":"9faab6","machine":"8ea69b","edge":"4a637c","hemi":0.65,"sun":0.65}
+OK  tema branco e verde lembrados ao recarregar
+OK  miniaturas e tema branco em desktop/celular, sem erros no console
+
+SELEÇÃO
+{"chrome":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36","three":"128","renderer":"ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)","areas":7,"machines":28}
+OK  seleção no mapa abre Equip. e rola apenas o editor, com contorno sobre o modelo
+OK  destaque permanece no tema White sem alterar a seleção
+OK  repetir clique revela o editor e troca de aba preserva seleção sem rolar o catálogo
+OK  clique a partir de Processo troca o contorno e preserva o piso e a câmera
+OK  renomear, rotacionar e arrastar mantêm o contorno vinculado ao mesmo modelo
+OK  WASD mantém a seleção e alterna com o mapa e estações
+OK  alternar seleção libera geometrias e reutiliza um único material
+OK  desseleção, exclusão e saída limpam contorno e formulário
+OK  recarga e restauração da demo começam sem referências antigas
+OK  console sem erros

@@ -110,10 +110,10 @@ export async function run({ assert, send, js, until, boot, sleep, errors }) {
   test('demonstração, identidade, câmera e painéis', async () => {
     assert.deepEqual(await js('[AL.length,MS.length,boards.length]'),[7,28,30]);
     await click('#themeSwitch');
-    assert.equal(await js('document.documentElement.dataset.theme'),'dark');
+    assert.equal(await js('document.documentElement.dataset.theme'),'light');
     assert.ok(await js('document.querySelector(".project-bar img").getAttribute("src")==="brand.svg"'));
     await click('#themeSwitch');
-    assert.equal(await js('document.documentElement.dataset.theme'),'light');
+    assert.equal(await js('document.documentElement.dataset.theme'),'dark');
     await click('.side [data-a="smt"]');
     assert.match(await js('panel.querySelector("h2").textContent'),/SMT/);
     await click('panel [data-m="SPI-01"], #panel [data-m="SPI-01"]');

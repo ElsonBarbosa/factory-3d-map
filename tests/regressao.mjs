@@ -15,8 +15,9 @@ const menu = process.argv.includes('--menu');
 const manual = process.argv.includes('--postos');
 const alignment = process.argv.includes('--alinhamento');
 const benches = process.argv.includes('--bancadas');
+const themeProduct = process.argv.includes('--theme');
 const mapProduct = process.argv.includes('--map');
-const checkConsole = mapProduct || wasd || selection || creator || menu || manual || alignment || benches;
+const checkConsole = themeProduct || mapProduct || wasd || selection || creator || menu || manual || alignment || benches;
 const html = await readFile(input);
 const tempRoot = resolve(tmpdir());
 const profile = await mkdtemp(join(tempRoot, 'virtual-factory-test-'));
@@ -119,7 +120,7 @@ try {
   }
   if (process.argv.includes('--boot-only')) process.exitCode = 0;
   else {
-    const { run } = await import(mapProduct ? './regressao-map.mjs' : benches ? './regressao-bancadas.mjs' : alignment ? './regressao-alinhamento.mjs' : manual ? './regressao-postos.mjs' : menu ? './regressao-menu.mjs' : creator ? './regressao-criador.mjs' : selection ? './regressao-selecao.mjs' : wasd ? './regressao-wasd.mjs' : './regressao-cenarios.mjs');
+    const { run } = await import(themeProduct ? './regressao-theme.mjs' : mapProduct ? './regressao-map.mjs' : benches ? './regressao-bancadas.mjs' : alignment ? './regressao-alinhamento.mjs' : manual ? './regressao-postos.mjs' : menu ? './regressao-menu.mjs' : creator ? './regressao-criador.mjs' : selection ? './regressao-selecao.mjs' : wasd ? './regressao-wasd.mjs' : './regressao-cenarios.mjs');
     events.set('Input.dragIntercepted', event => run.onDrag?.(event));
     await run({ assert, send, js, until, boot, sleep, errors });
   }

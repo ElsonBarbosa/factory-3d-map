@@ -149,7 +149,7 @@ export async function run({ assert, send, js, until, boot, errors }) {
       }
     }
     await resize(1800,1080);await paint();await click('#themeSwitch');
-    assert.equal(await js('document.documentElement.dataset.theme'),'dark');
+    assert.equal(await js('document.documentElement.dataset.theme'),'light');
     await click('#edExit');
     assert.ok(await js('panel.hidden && rotationHandle.style.display==="none"'));
   });

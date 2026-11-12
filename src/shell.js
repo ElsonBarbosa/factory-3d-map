@@ -2,7 +2,8 @@
 function fitMobileConstruction(){if(E.on&&innerWidth<600){resize();goal.d=homeD();cam.d=goal.d}}
 document.getElementById('editToggle').addEventListener('click',fitMobileConstruction);
 document.querySelectorAll('[data-tool]').forEach(b=>b.onclick=()=>{if(!E.on){setEdit(true);fitMobileConstruction()}setEditorCollapsed(false);openEditorTool(b.dataset.tool)});
-document.getElementById('themeSwitch').onclick=()=>{const light=document.documentElement.dataset.theme!=='light';document.documentElement.dataset.theme=light?'light':'dark';document.getElementById('themeSwitch').setAttribute('aria-checked',String(light))};
+function syncThemeSwitch(){const light=document.documentElement.dataset.theme==='light',button=document.getElementById('themeSwitch');button.setAttribute('aria-checked',String(light));button.setAttribute('aria-label',light?'Ativar tema verde':'Ativar tema branco');button.title=light?'Ativar tema verde':'Ativar tema branco'}
+document.getElementById('themeSwitch').onclick=()=>{const theme=document.documentElement.dataset.theme==='light'?'dark':'light';document.documentElement.dataset.theme=theme;try{localStorage.setItem('factory3dmap.theme.v1',theme)}catch{}syncThemeSwitch()};syncThemeSwitch();
 const jump=document.getElementById('areaJump');
 function syncMapShell(){
  const value=jump.value,visible=AL.filter(a=>a.floor.visible);

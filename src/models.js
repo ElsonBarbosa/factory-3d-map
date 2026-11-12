@@ -4,7 +4,7 @@ function mapModel(m,palette={}) {
  const root=new THREE.Group(),w=m.w,d=m.d,h=m.h||2.6;
  const station=isStation(m),s=manualSide(m),kind=machineKind(m),id=m.id||'';
  const mat=c=>new THREE.MeshStandardMaterial({color:c,roughness:.58,metalness:.18});
- const body=palette.body||mat('#e1e5df'),trim=palette.trim||mat('#527268'),steel=mat('#889990'),ink=mat('#283e43'),copper=mat('#b46d48'),windowMat=mat('#69999a'),green=mat('#267858');
+ const body=palette.body||mat('#8ea69b'),trim=palette.trim||mat('#365b50'),steel=mat('#889990'),ink=mat('#283e43'),copper=mat('#b46d48'),windowMat=mat('#69999a'),green=mat('#267858');
  const box=(p,x,y,z,a,b,c,material)=>{const o=new THREE.Mesh(new THREE.BoxGeometry(a,b,c),material);o.position.set(x,y,z);p.add(o);return o};
  const cyl=(p,x,y,z,r,len,material,axis)=>{const o=new THREE.Mesh(new THREE.CylinderGeometry(r,r,len,8),material);o.position.set(x,y,z);if(axis)o.rotation.z=Math.PI/2;p.add(o);return o};
  const B=(x,y,z,a,b,c,material=body)=>box(root,x,y,z,a,b,c,material);

@@ -159,7 +159,7 @@ export async function run({assert,send,js,until,boot,sleep,errors}){
       assert.ok(await js('document.documentElement.scrollWidth<=innerWidth && document.body.scrollWidth<=innerWidth'));
       assert.ok(await js('(innerWidth>600?stage.getBoundingClientRect().right<=editorDrawer.getBoundingClientRect().left:stage.getBoundingClientRect().bottom<=editorDrawer.getBoundingClientRect().top) && stage.clientHeight>140'));
       assert.ok(await js('!ED.querySelector("input,.edworkspace") && ED.querySelectorAll(".edtool-card").length===5'));
-      for(const theme of ['light','dark']){
+      for(const theme of ['dark','light']){
         if(await js('document.documentElement.dataset.theme')!==theme)await click('#themeSwitch');
         assert.equal(await js('document.documentElement.dataset.theme'),theme);
         if(process.env.VF_TEST_MENU_SCREENSHOT){

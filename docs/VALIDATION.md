@@ -5,7 +5,7 @@ Entrega independente preparada em 12/11/2026. Referência e inventário de compo
 ## Implementação
 
 - Composição nova: mapa como ambiente principal, ferramentas verticais, seletor compacto de áreas, faixa discreta de produção e inspetor contextual. O editor de construção ocupa um painel lateral; não há editor inferior no desktop.
-- Tema mineral claro por padrão, ardósia, cobre e verde técnico; marca própria inspirada em uma planta. Tema escuro opcional. Fontes do sistema, sem carregamento remoto.
+- Tema verde por padrão, ardósia, cobre e verde técnico; marca própria inspirada em uma planta. Tema branco opcional, com contraste entre base, áreas e equipamentos. Fontes do sistema, sem carregamento remoto.
 - Geradores procedurais novos de SPI, NXT, AOI, forno, ICT, FCT, corte, inspeção, bancadas, operadores e esteiras. Perfis, estruturas e silhuetas foram construídos especificamente para este produto.
 - Lógica funcional preservada em cópia independente: navegação, colisões, restrições de bancadas, redimensionamento, conexão/roteamento e persistência. Apresentações separadas em `construction.js`, `monitor.js`, `models.js`, `map.css` e `shell.js`.
 - Layout ativo em `factory3dmap.layout.v1`; cópias nomeadas em `factory3dmap.projects.v1`. Sem leitura, migração ou escrita da chave do Virtual Factory.
@@ -29,7 +29,7 @@ Nove suítes do novo produto aprovadas, mais inicialização por arquivo direto.
 | Produto independente | Chave original intocada, cópia nomeada, novo projeto, reabertura, sete silhuetas distintas dentro das pegadas, ferramentas e planta | Aprovada |
 | Arquivo direto | Inicialização do HTML com Three.js local | Aprovada |
 
-As adaptações visuais dos testes verificam o inspetor lateral, catálogo em grade e tema claro inicial. As verificações de geometria, espaçamento, corredores, conexões e persistência continuam ativas. O executor aguarda o evento de carregamento ao recarregar a página para evitar avaliar o documento anterior.
+As adaptações visuais dos testes verificam o inspetor lateral, catálogo em grade e tema verde inicial. As verificações de geometria, espaçamento, corredores, conexões e persistência continuam ativas. O executor aguarda o evento de carregamento ao recarregar a página para evitar avaliar o documento anterior.
 
 ## Desempenho e apresentação
 
@@ -48,3 +48,13 @@ Os indicadores são demonstrativos. A aplicação não possui integração com e
 ![Construção em desktop](interface-desktop.png)
 
 ![Construção em celular](interface-mobile.png)
+
+## Revisão dos temas — 12/11/2026
+
+Verde na primeira abertura, preferência persistida em namespace próprio e tema branco com base mais escura, áreas coloridas, contornos definidos e equipamentos em verde acinzentado. A iluminação do mapa e das miniaturas foi calibrada para evitar superfícies estouradas.
+
+A suíte específica de temas e a regressão de seleção foram aprovadas no Chrome. As capturas de desktop e celular foram revisadas. Registro: [theme-validation.txt](theme-validation.txt).
+
+![Tema verde padrão](theme-green.png)
+
+![Tema branco com contraste](theme-white.png)

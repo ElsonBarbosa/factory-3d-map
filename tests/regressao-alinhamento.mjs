@@ -169,7 +169,7 @@ export async function run({assert,send,js,until,boot,sleep,errors}){
     await click(port('SPI-A','out'));await move(await center(port('SPI-B','in')));await paint();
     assert.equal(await js('flowPreview.valid'),false);assert.equal(await js('flowPreviewMaterial.color.getHex()'),0xd95655);assert.equal(await js('E.links.length'),1);
     await click('#edCancelFlow');await paint();assert.ok(await js('!flowPreview.ribbon && alignmentGuides.every(l=>!l.visible)'));
-    await click('#themeSwitch');await paint();assert.equal(await js('document.documentElement.dataset.theme'),'dark');
+    await click('#themeSwitch');await paint();assert.equal(await js('document.documentElement.dataset.theme'),'light');
     await tool('machines');assert.ok(await js('!flowPreview.ribbon && alignmentGuides.every(l=>!l.visible)'));
   });
   assert.deepEqual(errors,[]);console.log('OK  console sem erros');

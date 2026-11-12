@@ -136,9 +136,9 @@ const so=new THREE.LineLoop(new THREE.BufferGeometry().setFromPoints([[-.5,-.5],
 const sp=new THREE.Mesh(new THREE.PlaneGeometry(1,1).rotateX(-Math.PI/2),new THREE.MeshBasicMaterial({transparent:true,opacity:.12,depthWrite:false}));
 so.visible=sp.visible=false;sc.add(so,sp);
 const mq=matchMedia('(prefers-color-scheme: dark)'),dark=()=>{const t=document.documentElement.dataset.theme;return t?t==='dark':mq.matches};
-function themeMachine(m,d=dark()){m.bm.color.set(d?'#83978e':'#dce1d6');m.am.color.set(d?'#526f64':'#527268')}
-function theme(){const d=dark();sc.background=new THREE.Color(d?'#182724':'#f2f3ed');plinth.material.color.set(d?'#31403c':'#cdd4c8');hemi.intensity=d?.55:.85;sun.intensity=d?.6:.75;beltM.color.set(d?'#59636d':'#3c454e');
- AL.forEach(a=>{a.mat.color.setHSL(a.hue/360,.10,d?.27:.89);a.edge.material.color.setHSL(a.hue/360,a.sat+.05,d?.42:.6)});
+function themeMachine(m,d=dark()){m.bm.color.set(d?'#83978e':'#8ea69b');m.am.color.set(d?'#526f64':'#365b50')}
+function theme(){const d=dark();sc.background=new THREE.Color(d?'#182724':'#f2f3ed');plinth.material.color.set(d?'#31403c':'#7e8f85');hemi.intensity=d?.55:.65;sun.intensity=d?.6:.65;beltM.color.set(d?'#59636d':'#3c454e');
+ AL.forEach(a=>{a.mat.color.setHSL(a.hue/360,.14,d?.27:.67);a.edge.material.color.setHSL(a.hue/360,a.sat+.05,d?.42:.39)});
  MS.forEach(m=>themeMachine(m,d));
  const ink=d?'#e6eaee':'#18222d';so.material.color.set(ink);sp.material.color.set(ink)}
 mq.addEventListener('change',theme);new MutationObserver(theme).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});theme();
@@ -477,7 +477,7 @@ function disposeModel(model,shared=[]){
  const materials=new Set();model.traverse(o=>{if(o.geometry)o.geometry.dispose();if(o.material&&!shared.includes(o.material))materials.add(o.material)});
  for(const material of materials)material.dispose();
 }
-function previewEnvironment(scene){scene.add(new THREE.HemisphereLight(0xffffff,0x556779,2));const light=new THREE.DirectionalLight(0xffffff,2);light.position.set(-7,14,15);scene.add(light);}
+function previewEnvironment(scene){scene.add(new THREE.HemisphereLight(0xffffff,0x556779,.75));const light=new THREE.DirectionalLight(0xffffff,.8);light.position.set(-7,14,15);scene.add(light);}
 function modelThumb(c,station){const key=c[0]+':'+station;if(thumbCache.has(key))return thumbCache.get(key);
  let model;
  try{if(!thumbRenderer){thumbRenderer=new THREE.WebGLRenderer({alpha:true,antialias:true,preserveDrawingBuffer:true});thumbRenderer.setPixelRatio(1);thumbRenderer.setSize(230,160)}

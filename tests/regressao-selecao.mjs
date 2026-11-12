@@ -87,7 +87,7 @@ export async function run({ assert, send, js, until, boot, errors }) {
   await check('destaque permanece no tema White sem alterar a seleção',async()=>{
     const material=await js('machineOutlineMaterial.uuid');
     await click('#themeSwitch');await paint();
-    assert.equal(await js('document.documentElement.dataset.theme'),'dark');
+    assert.equal(await js('document.documentElement.dataset.theme'),'light');
     assert.ok(await js('E.machineSelected==="SPI-01" && machineOutline.parent===M["SPI-01"].mesh'));
     assert.equal(await js('machineOutlineMaterial.uuid'),material);
     if(process.env.VF_TEST_SELECTION_SCREENSHOT){
