@@ -1,0 +1,9 @@
+node_modules/
+tests/reference/
+testes-*/
+evidence/
+*.log
+initial.png
+overview.png
+.env*
+.cache/

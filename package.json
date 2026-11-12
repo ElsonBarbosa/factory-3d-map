@@ -1,0 +1,1 @@
+{"name":"factory-3d-map","version":"1.0.0","private":true,"description":"Planejamento industrial em um mapa 3D independente","scripts":{"start":"node server.mjs","test":"node tests/run-all.mjs"},"engines":{"node":">=22"}}

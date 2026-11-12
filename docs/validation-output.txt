@@ -1,0 +1,118 @@
+GERAL
+{"chrome":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36","three":"128","renderer":"ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)","areas":7,"machines":28}
+OK  demonstração, identidade, câmera e painéis
+OK  edições e exclusões da demonstração persistem
+OK  processo novo, quatro cantos e dimensões independentes
+OK  SMT, instalação, conexão, movimento, redimensionamento e recarga
+OK  localStorage inválido e remoção de área com lacuna de IDs
+OK  nomes com marcação são tratados como texto e a área ocupada abre o painel
+OK  estações, cadastro com ID repetido, Delete e descarte WebGL
+OK  posicionamento por clique, transferência entre áreas e desfazer esteira
+OK  quatro cantos de área, recuperação após redução e colisões
+OK  retorno em U, ciclos, sentido das setas e exclusão da esteira
+    WebGL com 6 áreas, 24 equipamentos, 18 esteiras: {"geometriasAntes":643,"geometriasDepois":643}
+OK  folga exata de 3 unidades e capacidade de renderização com várias linhas
+OK  editor e confirmação em janela estreita
+OK  recuperação de layout antigo com esteiras inconsistentes
+OK  biblioteca local funciona com ambos CDNs bloqueados
+
+
+SUÍTE --bancadas
+{"chrome":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36","three":"128","renderer":"ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)","areas":7,"machines":28}
+OK  inspetor vertical, propriedades acessíveis e catálogo contextual em três resoluções
+OK  disposição lateral encosta na esteira e paralela aproxima operador uma unidade
+OK  bancada lateral aceita 180 graus mantendo centro, ID e modo após recarga
+OK  paralela e lateral coexistem no mesmo fluxo com PCB e guias preservadas
+OK  bancadas encostam de costas no grid e sobreposição real é bloqueada
+OK  máquinas automáticas conservam espaçamento de três unidades e fixture
+OK  flexibilização entre bancadas não permite atravessar esteira existente
+OK  instalação lateral, edição de ID, temas e restauração preservam posto e operador
+OK  console sem erros
+
+
+SUÍTE --postos
+{"chrome":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36","three":"128","renderer":"ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)","areas":7,"machines":28}
+OK  corredor central compartilhado, par de postos e PCB fora das bancadas
+OK  postos de frente, invertidos e com fluxo vertical respeitam a passagem
+OK  inversão de lado, rotação e reserva do operador são salvas e validadas
+OK  catálogo instala bancada de teste, escolhe lado e preserva os três jigs
+OK  quatro rotações conectadas, rejeição de limite e reconstrução sem resíduos
+OK  edições dos postos da demonstração restauram também o modelo e o operador
+OK  testador automático tem fixture com abertura e fechamento no loop original
+OK  console sem erros
+
+
+SUÍTE --selecao
+{"chrome":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36","three":"128","renderer":"ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)","areas":7,"machines":28}
+OK  seleção no mapa abre Equip. e rola apenas o editor, com contorno sobre o modelo
+OK  destaque permanece no tema White sem alterar a seleção
+OK  repetir clique revela o editor e troca de aba preserva seleção sem rolar o catálogo
+OK  clique a partir de Processo troca o contorno e preserva o piso e a câmera
+OK  renomear, rotacionar e arrastar mantêm o contorno vinculado ao mesmo modelo
+OK  WASD mantém a seleção e alterna com o mapa e estações
+OK  alternar seleção libera geometrias e reutiliza um único material
+OK  desseleção, exclusão e saída limpam contorno e formulário
+OK  recarga e restauração da demo começam sem referências antigas
+OK  console sem erros
+
+
+SUÍTE --wasd
+{"chrome":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36","three":"128","renderer":"ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)","areas":7,"machines":28}
+OK  WASD nas quatro direções e quatro diagonais normalizadas
+OK  W segue o azimute após órbitas reais de 90° e 180°
+OK  zoom por roda e velocidades de navegação próximas e distantes
+OK  aceleração, desaceleração e integração equivalente a 30, 60 e 120 FPS
+OK  limite acompanha o processo e preserva o retorno de fora da margem
+OK  troca rápida entre WASD, órbita e pan por mouse
+OK  alternância real de abas limpa tecla pressionada e velocidade
+OK  editor de equipamento e área, redimensionamento e proteção de esteira
+OK  digitação, campos editáveis, modal e atalhos com Ctrl, Alt e Meta
+OK  console sem erros e sem exceções de página
+
+
+SUÍTE --criador
+{"chrome":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36","three":"128","renderer":"ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)","areas":7,"machines":28}
+OK  ferramentas laterais e recolhimento sem alterar a câmera
+OK  alça única e rotação suave nos quatro ângulos com esteira e centro preservados
+OK  rotações inválidas por limite e por colisão retornam à orientação válida
+OK  Escape cancela a prévia e WASD volta após a rotação
+OK  propriedades acessíveis, catálogo em bandeja e ausência de overflow na página
+OK  console sem erros
+
+
+SUÍTE --menu
+{"chrome":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36","three":"128","renderer":"ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)","areas":7,"machines":28}
+OK  visão inicial só com cinco ícones, detalhes e botão Voltar
+OK  novo processo bloqueia as quatro etapas e impede saltos, inclusive após recarga
+OK  criar e dimensionar uma área libera equipamentos e estações
+OK  segundo equipamento libera esteiras e preserva a conexão após salvar e recarregar
+OK  layouts legados abrem sem migração e estações também liberam esteiras
+OK  Dark/White, responsividade e controles fora da área útil do mapa
+OK  console sem erros
+
+
+ALINHAMENTO
+{"chrome":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36","three":"128","renderer":"ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)","areas":7,"machines":28}
+OK  diferença de uma fileira usa segmentos ortogonais, sem diagonal residual
+OK  projeção do cursor acompanha o grid em visão rasante
+OK  prévia reta, centro nas portas, guia verde e marcador no snap do cursor
+OK  equipamento girado mantém pegada e centro; guias não adicionam magnetismo
+OK  drag-and-drop nativo usa guias e confirma o mesmo centro do preview
+OK  portas giradas produzem conexão vertical e guia de coluna
+OK  movimentação por clique e arrasto mostra fileira/coluna e limpa as guias
+OK  estações alinham o corredor; prévia e confirmação manual usam a mesma geometria
+OK  prévia inválida não altera dados; saída, troca de ferramenta e exclusão não deixam resíduos
+OK  console sem erros
+
+
+PRODUTO
+{"chrome":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36","three":"128","renderer":"ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)","areas":7,"machines":28}
+OK  isolamento: dados originais não são lidos, alterados ou migrados
+OK  cópia nomeada, novo projeto e reabertura após recarga
+OK  sete silhuetas próprias dentro da pegada e bancada com três jigs e operador novo
+OK  ferramentas, catálogo CUT, planta e interface em 1440, 1024 e 390 pixels
+OK  console sem erros
+
+
+ARQUIVO DIRETO
+{"chrome":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36","three":"128","renderer":"ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)","areas":7,"machines":28}
