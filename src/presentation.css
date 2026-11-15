@@ -1,0 +1,20 @@
+.presentation-launch{position:absolute;top:23px;right:275px;z-index:21;padding:9px 15px;border-color:var(--copper);font-size:12px;font-weight:600;background:var(--panel)}
+.presentation-controls,.presentation-caption{display:none}
+.presentation-mode .map-viewport{inset:0!important}
+.presentation-mode .map-tools,.presentation-mode .map-navigator,.presentation-mode .editor-drawer,.presentation-mode .panel,.presentation-mode #closeInspector,.presentation-mode .production-strip,.presentation-mode .map-caption,.presentation-mode .project-library,.presentation-mode .presentation-launch,.presentation-mode .save-state,.presentation-mode #lbs,.presentation-mode #flowPorts,.presentation-mode #editorHandles,.presentation-mode #edRotateHandle,.presentation-mode #tip{display:none!important}
+.presentation-mode #cv{pointer-events:none;cursor:default}
+.presentation-mode .project-bar{z-index:14;pointer-events:none}
+.presentation-mode .presentation-controls{display:flex;position:absolute;bottom:24px;right:24px;align-items:center;gap:6px;padding:7px;border:1px solid var(--line);border-radius:7px;background:var(--panel);box-shadow:var(--shadow);z-index:40}
+.presentation-controls button{min-height:36px;min-width:36px;font-size:12px}
+#presentationPause{min-width:86px;background:var(--ok);color:#fff;border-color:var(--ok)}
+#presentationCount{font-size:10px;color:var(--mute);min-width:50px;text-align:center;font-variant-numeric:tabular-nums}
+.presentation-mode .presentation-caption{display:flex;flex-direction:column;gap:5px;position:absolute;bottom:29px;left:24px;max-width:calc(100% - 410px);padding:7px 12px;border-left:2px solid var(--copper);background:var(--panel);z-index:16;pointer-events:none}
+.presentation-caption small{font-size:9px;color:var(--mute);letter-spacing:.13em}
+.presentation-caption strong{font-size:15px;font-weight:500;overflow-wrap:anywhere}
+.app:fullscreen{width:100%;height:100%;background:var(--bg)}
+@media(max-width:1200px){.presentation-launch{top:96px;right:24px}}
+@media(max-width:700px){.presentation-mode .presentation-controls{bottom:14px;right:12px;left:12px;justify-content:center;gap:4px}.presentation-mode .presentation-caption{left:14px;bottom:92px;max-width:calc(100% - 28px)}.presentation-caption strong{font-size:12px}.presentation-controls button{padding:6px 9px}.presentation-mode .brand small{max-width:245px;overflow:hidden;white-space:nowrap}}
+@media(max-width:600px){.presentation-launch{top:76px;left:75px;right:auto;width:150px;font-size:11px;padding:8px}}
+@media(max-height:500px) and (min-width:701px){.presentation-mode .presentation-controls{bottom:12px}.presentation-mode .presentation-caption{bottom:16px}.presentation-mode .project-bar{top:12px}}
+
+@media(min-width:601px) and (max-width:1200px){.map-navigator .nav-compass{margin-top:60px}}

@@ -58,3 +58,7 @@ A suíte específica de temas e a regressão de seleção foram aprovadas no Chr
 ![Tema verde padrão](theme-green.png)
 
 ![Tema branco com contraste](theme-white.png)
+
+## Modo apresentação — 14/11/2026
+
+Implementação, referência local consultada, capturas e testes em [PRESENTATION.md](PRESENTATION.md). A suíte específica de apresentação e as regressões de WASD e do criador foram aprovadas. O projeto smart-web foi somente lido.

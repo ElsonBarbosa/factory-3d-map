@@ -151,7 +151,7 @@ const inView=v=>v.z>=-1&&v.z<=1&&Math.abs(v.x)<=1&&Math.abs(v.y)<=1;
 function proj(e,x,y,z,show=true){V.set(x,y,z).project(cam3);const ok=inView(V)&&show;e.style.display=ok?'':'none';if(ok)e.style.transform=`translate(${(V.x*.5+.5)*W}px,${(-V.y*.5+.5)*H}px) translate(-50%,-50%)`}
 /* câmera orbital */
 const homeD=()=>98*Math.max(1,1.5/(W/H)),cam={t:HOME.clone(),d:84,th:.3,ph:.95},goal={t:HOME.clone(),d:84};
-function resize(){W=stage.clientWidth;H=stage.clientHeight;if(!W||!H)return;rd.setSize(W,H,false);cam3.aspect=W/H;cam3.updateProjectionMatrix();if(!sel&&!stage.parentElement.classList.contains('editor-mode'))goal.d=homeD()}
+function resize(){W=stage.clientWidth;H=stage.clientHeight;if(!W||!H)return;rd.setSize(W,H,false);cam3.aspect=W/H;cam3.updateProjectionMatrix();if(!window.factoryPresentation?.active&&!window.factoryPresentation?.restoring&&!sel&&!stage.parentElement.classList.contains('editor-mode'))goal.d=homeD()}
 new ResizeObserver(resize).observe(stage);resize();cam.d=goal.d;
 function select(k,id){if(k&&!(k==='m'?M[id]:A[id]))return;sel=k?{k,id}:null;$('.app').classList.toggle('sel',!!sel);panel.innerHTML=!sel?(E.blank?'<div class="eb">Novo processo</div><h2>Seu layout</h2><div class="note">Entre no editor para criar áreas, instalar equipamentos e conectar esteiras.</div>':home()):k==='m'?mPanel(M[id]):aPanel(A[id]);panel.scrollTop=0;panel.hidden=!sel;
  document.querySelectorAll('.side .al').forEach(b=>b.classList.toggle('on',!!sel&&b.dataset.a===(k==='m'?M[id].a:id)));
@@ -172,7 +172,7 @@ function pan(dx,dy){const k=Math.max(.02,cam.d*.00135),s=Math.sin(cam.th),c=Math
 const cameraKeys=new Set(),cameraKeyVelocity={x:0,z:0};
 let lastCameraKeyFrame=0;
 const cameraTextFocus=el=>el?.matches?.('input,textarea,select')||el?.isContentEditable;
-const cameraKeysBlocked=()=>document.hidden||cameraTextFocus(document.activeElement)||
+const cameraKeysBlocked=()=>window.factoryPresentation?.active||document.hidden||cameraTextFocus(document.activeElement)||
  ptrs.size||E.drag||E.placing||E.from||activeCatalogueDrag||installPending;
 function stopCameraKeys(){cameraKeys.clear();cameraKeyVelocity.x=cameraKeyVelocity.z=0}
 document.addEventListener('keydown',e=>{
@@ -1215,9 +1215,9 @@ extras.querySelector('#edResetProcess').onclick=()=>{if(confirm('Restaurar a dem
 restoreLayout();
 
 select(null);
-(function loop(t){updateCameraKeys(t);cam.t.lerp(goal.t,.1);cam.d+=(goal.d-cam.d)*.1;const s=Math.sin(cam.ph);
- cam3.position.set(cam.t.x+cam.d*s*Math.sin(cam.th),cam.d*Math.cos(cam.ph),cam.t.z+cam.d*s*Math.cos(cam.th));cam3.lookAt(cam.t);cam3.updateMatrixWorld();
+(function loop(t){if(!window.factoryPresentation?.update(t)){updateCameraKeys(t);cam.t.lerp(goal.t,.1);cam.d+=(goal.d-cam.d)*.1;}const s=Math.sin(cam.ph);
+ cam3.position.set(cam.t.x+cam.d*s*Math.sin(cam.th),cam.t.y+cam.d*Math.cos(cam.ph),cam.t.z+cam.d*s*Math.cos(cam.th));cam3.lookAt(cam.t);cam3.updateMatrixWorld();
  animateFixtures(t);boards.forEach((b,i)=>{const p=at(i*TOT/boards.length+t/1000*3);b.position.set(p[0]+demoOffset.x,.58,p[1]+demoOffset.z)});animateLinks(t);
- AL.forEach(a=>proj(a.lb,a.x,.3,a.z+a.d/2+.9,a.floor.visible));editorFrame();const tg=cam.d<58;MS.forEach(m=>proj(m.lb,m.pos.x,m.h+1.9,m.pos.z,tg&&m.mesh.visible));
+ AL.forEach(a=>proj(a.lb,a.x,.3,a.z+a.d/2+.9,a.floor.visible));if(!window.factoryPresentation?.active)editorFrame();const tg=cam.d<58;MS.forEach(m=>proj(m.lb,m.pos.x,m.h+1.9,m.pos.z,tg&&m.mesh.visible));
  rd.render(sc,cam3);requestAnimationFrame(loop)})(0);
 window.dispatchEvent(new Event('factory-map-ready'));

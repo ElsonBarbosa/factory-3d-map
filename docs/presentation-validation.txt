@@ -1,0 +1,33 @@
+presentation-results.log
+{"chrome":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36","three":"128","renderer":"ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)","areas":7,"machines":28}
+OK  partida direta, fallback de tela cheia, isolamento de edição, todas as cenas automáticas e restauração exata
+OK  processo deslocado, equipamentos rotacionados, estação com operador e área vazia usam geometria real
+OK  processo 800×400 sem áreas enquadrado em celular e paisagem, com plano distante adaptativo
+OK  movimento reduzido remove órbita e transições animadas sem interromper a sequência
+OK  pedido nativo de tela cheia e saída: fallback permitido pelo navegador
+OK  contrato de tela cheia aceita, saída e aceitação tardia após cancelar (API simulada)
+OK  console sem erros e referência externa sem dependência de execução
+
+
+presentation-wasd-results.log
+{"chrome":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36","three":"128","renderer":"ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)","areas":7,"machines":28}
+OK  WASD nas quatro direções e quatro diagonais normalizadas
+OK  W segue o azimute após órbitas reais de 90° e 180°
+OK  zoom por roda e velocidades de navegação próximas e distantes
+OK  aceleração, desaceleração e integração equivalente a 30, 60 e 120 FPS
+OK  limite acompanha o processo e preserva o retorno de fora da margem
+OK  troca rápida entre WASD, órbita e pan por mouse
+OK  alternância real de abas limpa tecla pressionada e velocidade
+OK  editor de equipamento e área, redimensionamento e proteção de esteira
+OK  digitação, campos editáveis, modal e atalhos com Ctrl, Alt e Meta
+OK  console sem erros e sem exceções de página
+
+
+presentation-creator-results.log
+{"chrome":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36","three":"128","renderer":"ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)","areas":7,"machines":28}
+OK  ferramentas laterais e recolhimento sem alterar a câmera
+OK  alça única e rotação suave nos quatro ângulos com esteira e centro preservados
+OK  rotações inválidas por limite e por colisão retornam à orientação válida
+OK  Escape cancela a prévia e WASD volta após a rotação
+OK  propriedades acessíveis, catálogo em bandeja e ausência de overflow na página
+OK  console sem erros

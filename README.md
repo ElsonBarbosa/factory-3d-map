@@ -29,6 +29,12 @@ O tema verde é o padrão na primeira abertura. O tema branco usa pisos e equipa
 
 Layouts ficam no navegador e na origem usada. Arquivo local e HTTP podem ter armazenamentos diferentes. Limpar os dados do navegador também remove os layouts. As chaves são próprias do Factory 3D Map e não carregam dados do Virtual Factory.
 
+## Modo apresentação
+
+O botão superior inicia o filme automaticamente: processo completo → cada área → seus equipamentos → visão geral final. O enquadramento usa as dimensões reais do layout. Há pausa, anterior/próxima cena, repetição e saída por Esc, com restauração da câmera e da edição. A tela cheia é solicitada quando permitida; o filme também funciona dentro da página.
+
+A referência de movimento foi consultada no projeto local da ProgTech Solutions, sem alterar seus arquivos. Consulte [implementação e testes da apresentação](docs/PRESENTATION.md).
+
 ## Código
 
 | Arquivo | Responsabilidade |
@@ -38,6 +44,7 @@ Layouts ficam no navegador e na origem usada. Arquivo local e HTTP podem ter arm
 | `src/monitor.js` | Painéis demonstrativos de área, equipamento e produção |
 | `src/models.js` | Biblioteca procedural exclusiva de modelos e perfil das esteiras |
 | `src/shell.js` | Ferramentas verticais, navegação compacta, vistas e tema |
+| `src/presentation.js` e `src/presentation.css` | Filme automático, enquadramento, controles e restauração |
 | `src/projects.js` | Biblioteca de cópias nomeadas de projetos |
 | `src/map.css` | Sistema visual e layouts responsivos |
 
